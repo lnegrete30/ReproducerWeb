@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:composite="http://xmlns.jcp.org/jsf/composite"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	<h:body>
+		<composite:interface>
+			<composite:attribute name="name" required="true" />
+			<composite:attribute name="target" default="head" />
+		</composite:interface>
+
+		<composite:implementation>
+			<ui:fragment>
+				<h:outputScript target="#{cc.attrs.target}" name="#{cc.attrs.name}" />
+			</ui:fragment>
+		</composite:implementation>
+	</h:body>
+</html>
